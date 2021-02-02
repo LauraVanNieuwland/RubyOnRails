@@ -1,0 +1,24 @@
+<h1>NEW GAME</h2>
+
+<h2 id="grid">
+      <span><%=@letters[0]%></span>
+      <span><%=@letters[1]%></span>
+      <span><%=@letters[2]%></span>
+      <span><%=@letters[3]%></span>
+      <span><%=@letters[4]%></span>
+      <span><%=@letters[5]%></span>
+      <span><%=@letters[6]%></span>
+      <span><%=@letters[7]%></span>
+      <span><%=@letters[8]%></span>
+      <span><%=@letters[9]%></span>
+</h2>
+
+<form action="/score" method="post">
+  <input type="text" name="word" placeholder="Type your word">
+  <input type="submit">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :grid_letters, @letters %>
+
+</form>
+
+<%= link_to "score", score_path %>

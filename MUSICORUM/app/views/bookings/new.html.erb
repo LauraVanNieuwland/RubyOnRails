@@ -1,0 +1,14 @@
+<div class="form-container-booking">
+<div class="row">
+  <div class="col-6 offset-3">
+<br>
+<h3>Book this instrument:</h3>
+<br>
+<%= simple_form_for [ @instrument, @booking ] do |f| %>
+  <%= f.input :start_date, label: "Start date:" , as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
+  <%= f.input :end_date, label: "End date:" , as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
+  <%= f.submit "Confirm", class: "btn btn-dark" %>
+<% end %>
+</div>
+</div>
+</div>

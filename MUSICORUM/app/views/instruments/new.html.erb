@@ -1,0 +1,20 @@
+<div class="form-container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <br>
+        <h3>Add a new instrument:</h3>
+      <br>
+      <%= simple_form_for [ @instrument ] do |f| %>
+        <%= f.input :instrument_name, label: "Instument name:" %>
+        <%= f.input :description, label: "Description:" %>
+        <%= f.input :price, label: "Price per day (€):" %>
+        <%= f.input :location, label: "Location:" %>
+        <%= f.input :image, as: :file, label: "Image:" %>
+        <%= f.submit "Submit", class: "btn btn-dark" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+

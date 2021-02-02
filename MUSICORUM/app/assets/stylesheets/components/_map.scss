@@ -1,0 +1,52 @@
+.content {
+  display: flex;
+  grid-gap: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.6)),
+    url(backgo_mfzx8q_2_jfia6a.jpg);
+}
+.cards {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+  border: white;
+}
+
+#map {
+  height: 600px;
+  position: sticky;
+  top: 0;
+}
+
+/*Media Queries*/
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
+}

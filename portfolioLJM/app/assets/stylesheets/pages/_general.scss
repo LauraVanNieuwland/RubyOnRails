@@ -1,0 +1,17 @@
+body {
+  background: rgb(153,185,170);
+  background: linear-gradient(90deg, rgba(153,185,170,1) 17%, rgba(136,165,151,1) 41%, rgba(153,185,170,1) 78%);
+  background-attachment: fixed;
+}
+
+#logo-small img {
+  height: 50px;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#logo-big img {
+
+}

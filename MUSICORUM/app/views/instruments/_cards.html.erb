@@ -1,0 +1,19 @@
+<div class="cards-container">
+  <% @instruments.each do |instrument| %>
+    <%= link_to instrument_path(instrument), class: "instrument-card" do %>
+      <div class="card-content">
+        <h2 id="name">
+          <%= instrument.instrument_name %>
+        </h2>
+        <p>
+          <%= instrument.price %> P/D
+        </p>
+      </div>
+      <% if instrument.image.attached? %>
+        <%= cl_image_tag (instrument.image.key), height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <%= image_tag 'backgo_mfzx8q_2_jfia6a.jpg', height: 300, width: 400 %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

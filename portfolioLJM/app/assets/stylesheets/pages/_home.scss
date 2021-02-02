@@ -1,0 +1,134 @@
+// Specific CSS for your home-page
+
+.main-container {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.container-homepage {
+  display: flex;
+  // border: 1px solid red;
+  // justify-content: space-around;
+  align-items: center;
+  margin-left: 20px;
+  padding-right: 20px;
+}
+
+.bio-container {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 100px;
+  grid-gap: 20px;
+  margin-left: 30px;
+}
+
+.content-left h2 {
+  text-shadow: 2px 3px 5px rgba(0,0,0,0.1);
+}
+
+// .bio-card {
+//   border:solid 1px #333;
+//   background-color: #0099ff;
+// }
+
+.github-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.github-project h6 {
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  padding-bottom: 20px;
+
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 80px;
+  width: 177px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-category:hover {
+  transform: scale(1.20) translateY(-7px);
+
+}
+
+.card-project-1{
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('project_1.PNG');
+
+}
+
+.card-project-2{
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('project_2.PNG');
+
+}
+
+.card-project-3{
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('project_3.PNG');
+
+}
+
+.card-project-4{
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('github_projects.jpg');
+
+}
+
+
+
+.div {
+
+  // border: 1px solid red;
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+  /* phones */
+
+  .container-homepage {
+    display: block;
+  }
+  .bio-container {
+    display: block;
+  }
+  .card-category {
+    margin: 0 20px 20px 0;
+
+  }
+  #logo-big img {
+      vertical-align: middle;
+      /* border-style: none; */
+      max-width: 100%;
+      padding-right: 10px;
+  }
+  .content-left h2 {
+    font-size: 25px;
+    
+  }
+
+  .menu-item-navbar {
+    display: none;
+  }
+
+  #navbar a {
+    padding-right: 5px;
+
+}
+}

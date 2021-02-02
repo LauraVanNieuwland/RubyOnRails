@@ -1,0 +1,32 @@
+
+<div class="sh-container col-sm-12">
+          <div class="shw-card col-12 col-xs-6 col-sm-6">
+              <h3>Is this maybe the <strong><%= @instrument.instrument_name %></strong> you are looking for? </h3>
+              <br>
+               <p>
+            <i class:"instrument-img" aria-hidden="true"></i>
+            <% if @instrument.image.attached? %>
+              <%= cl_image_tag (@instrument.image.key), height: 200, width: 300, crop: :fill %>
+            <% else %>
+              <%= image_tag 'backgo_mfzx8q_2_jfia6a.jpg', height: 200, width: 300 %>
+            <% end %>
+          </p>
+              <br>
+              <br>
+              <p><strong><%= @instrument.description %></strong></p>
+              <br>
+              <p> <i class="fa fa-map-marker" aria-hidden="true"></i> <%= @instrument.location%></p>
+              <p> <i class="fa fa-eur" aria-hidden="true"></i> € <%= @instrument.price %> per day </p>
+              <br>
+
+            </div>
+          <div class="shw-card-book col-12 col-xs-9 col-sm-3">
+            <h3>Book this instrument:</h3>
+            <br>
+            <%= simple_form_for [ @instrument, @booking ] do |f| %>
+            <%= f.input :start_date, label: "Start date:" , as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
+            <%= f.input :end_date, label: "End date:" , as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
+            <%= f.submit "Confirm", class: "btn btn-dark" %>
+          <% end %>
+          </div>
+  </div>

@@ -1,0 +1,10 @@
+  <div class="card">
+    <h1><%= @flat.name %></h1>
+    <p><%=@flat.address %></p>
+    <p><%= @flat.description %> </p>
+    <p> <i class="tiny material-icons">people</i><%= @flat.number_of_guests%><i class="tiny material-icons">euro_symbol</i> <%= @flat.price_per_night %></p>
+    <div id="card-footer">
+      <%= link_to "Go back", flats_path %>
+    </div>
+  </div>
+

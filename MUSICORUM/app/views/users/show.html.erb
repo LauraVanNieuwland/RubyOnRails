@@ -1,0 +1,64 @@
+<div class="profile-container">
+  <div class="row">
+    <div class="col-6 offset-3">
+    <div class="card-category">
+  <%= current_user.first_name %> <%= current_user.last_name %>
+</div>
+<br>
+      <div class="card-profile-frame">
+      <% if current_user.profile_image.attached? %>
+          <%= cl_image_tag current_user.profile_image.key,  height: 300, width: 400, class: 'avatar-large' %>
+        <% else %>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+        <% end %>
+      <div class="card-profile-infos-frame">
+        <p><strong>Name:</strong> <%= current_user.first_name %> <%= current_user.last_name %></p>
+        <p><strong>Phone:</strong> <%= current_user.phone_number %></p>
+        <p><strong>Email:</strong> <%= current_user.email %></p>
+        <p><%= current_user.description %></p>
+      </div>
+    </div>
+
+
+
+      <div class="card-example">
+
+        <h4><b>My instruments for rent</b></h4>
+           <% Booking.where(instrument_id: current_user.instruments).each do |booking| %>
+           <div class="card-example">
+            <h4><%= booking.instrument.instrument_name %></h4>
+            <p>Status: <%= booking.status %></p>
+            <p>Start date: <%= booking.start_date%></p>
+            <p>End date: <%= booking.start_date%></p>
+
+            <div class="button-position-profile">
+            <p><%= button_to "Decline", decline_instrument_booking_path(booking.instrument, booking), :class => '.button-position-profile',  method: :put%></p>
+            </div>
+
+            <div class="button-position-profile">
+              <p><%= button_to "Accept", accept_instrument_booking_path(booking.instrument, booking) , method: :put%></p>
+            </div>
+            <p></p>
+
+            </div>
+            <% end %>
+
+      </div>
+      <div class="card-example">
+
+        <h4><b>Instruments</b></h4>
+           <% current_user.instruments.each do |instrument| %>
+           <div class="card-example">
+              <h5><%= instrument.instrument_name %></h5>
+              <p><%= button_to "Delete", instrument_path(instrument) , method: :delete%></p>
+            </div>
+            <% end %>
+      </div>
+
+
+<br>
+      <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-dark" %>
+
+    </div>
+  </div>
+</div>

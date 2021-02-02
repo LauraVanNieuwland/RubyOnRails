@@ -1,0 +1,74 @@
+.welcome {
+  padding: 30px;
+  padding-left: 40px;
+  color: whitesmoke;
+}
+
+// }
+.background {
+  background-image: url('https://res.cloudinary.com/dzgkt799y/image/upload/v1598440270/backgo_mfzx8q_2_jfia6a.jpg');
+  min-height: 1000px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+// .content {
+//   display: flex;
+// }
+
+// .card-trip {
+//   flex-grow: 1;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-gap: 16px;
+//   padding: 16px;
+// }
+
+// #map {
+//   height: 100vh;
+//   position: sticky;
+//   top: 0;
+// }
+
+// // #name {
+// //   margin: 0;
+// //   font-family: 'Work Sans', 'Helvetica', 'sans-serif';
+// //   font-size: 1rem;
+// //   font-weight: 400;
+// //   line-height: 0;
+// //   color: #0e0000;
+// //   text-align: right;
+// //   background-color: #f4f4f4;
+// // }
+// /*Media Queries*/
+
+// /*Smallest device*/
+// @media (min-width: 100px) and (max-width: 575px) {
+//   .cards-container {
+//     grid-template-columns: 1fr;
+//   }
+//   #map {
+//     display: none;
+//   }
+// }
+
+// /*Small devices (landscape phones, 576px and up)*/
+// @media (min-width: 576px) {
+//   .cards-container {
+//     grid-template-columns: 1fr 1fr;
+//   }
+//   #map {
+//     display: none;
+//   }
+// }
+
+// /*Medium devices (tablets, 768px and up)*/
+// @media (min-width: 1200px) {
+//   .cards-container {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+//   #map {
+//     display: block;
+//   }
+// }

@@ -1,0 +1,14 @@
+<!-- app/views/tasks/index.html.erb -->
+
+<%= link_to "Create a new task", tasks_new_path %>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= task.title %></li>
+    <%= link_to "show", task_path(task) %>
+    <%= link_to "Update a task", edit_task_path(task[:id]) %>
+    <%= link_to "delete", task_path(task), confirm: "Are you sure you want to delete this?", method: :delete %>
+  <% end %>
+
+</ul>
+

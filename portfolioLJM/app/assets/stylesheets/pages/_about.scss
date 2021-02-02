@@ -1,0 +1,191 @@
+.main-container-about {
+  // border: 2px solid red;
+  width: 75%;
+  display: flex;
+}
+
+.container-about {
+  margin: 20px 0 30px 30px;
+  background-color: #F8ECDB;
+  color: #584815;
+  box-shadow: 0 0 0 14px #fff, 0 0 0 20px #CCD198;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-about p {
+  color: #584815;
+  margin: 10px 0 10px 0;
+  text-align: justify;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+}
+
+.gold-line {
+  border-bottom: black 2px solid;
+  width: 80%;
+}
+
+.about-div {
+  display: flex;
+  width: 80%;
+  // align-items: center;
+  justify-content: center;
+}
+
+.experience-div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-img img{
+  margin: 10px 0 0 10px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px white solid;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.company-information h1 {
+  color: #584815 ;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.company-information h2 {
+  color: #584815 ;
+  font-size: 15px;
+
+}
+
+.company-information p {
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-card {
+  display: flex;
+  background-color: rgba(255,255,255, 0.5);
+  border-radius: 2px;
+  overflow: hidden;
+  width: 100%;
+  margin: 10px 0 0 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.company-logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
+  margin: 5px 0 5px 5px;
+}
+
+.company-information {
+  padding: 0 0 0 20px;
+  margin: 5px;
+}
+// Skills //
+
+// .skill-img img {
+//   width: 100px;
+//   height: 100px;
+// }
+
+.sql-logo  {
+  width: 100px;
+  height: 100px;
+}
+
+.ruby-logo {
+  width: 99px;
+  height: 99px;
+}
+
+.html-logo {
+  width: 108px;
+  height: 108px;
+}
+
+.css-logo {
+  width: 108px;
+  height: 108px;
+}
+
+
+.javascript-logo {
+  width: 124px;
+  height: auto;
+}
+
+//////// TABSSSSSSSSSSSSSSSSSSS //////////////////
+
+/* Style the tab */
+.tab {
+
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  width: 83%;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+  /* phones */
+
+.about-img img {
+  width: 75px;
+  height: 75px;
+}
+
+.about-div {
+  flex-direction: column-reverse;
+}
+
+.container-about p {
+  text-align: left;
+  font-size: 14px;
+}
+
+.experience-div {
+  width: 143px;
+}
+.experience-card {
+  display: grid;
+  
+}
+}

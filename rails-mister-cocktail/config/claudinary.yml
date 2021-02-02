@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: lauravannieuwland
+  api_key: '885356643991487'
+  api_secret: v0zmKLROv4zRQmVjjoH4d741nB8
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: lauravannieuwland
+  api_key: '885356643991487'
+  api_secret: v0zmKLROv4zRQmVjjoH4d741nB8
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: lauravannieuwland
+  api_key: '885356643991487'
+  api_secret: v0zmKLROv4zRQmVjjoH4d741nB8
+  enhance_image_tag: true
+  static_file_support: false

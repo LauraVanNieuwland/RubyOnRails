@@ -1,0 +1,68 @@
+<div class="main-container">
+  <%= render 'shared/sidebar' %>
+  <div class="main-container-about">
+    <div class="container-about">
+      <h2>Meet Laura</h2>
+      <div class="gold-line"></div>
+      <div class="about-div">
+        <p>My name is Laura van Nieuwland. I am a Full Stack Web Developer specialized in Ruby on Rails. 
+         <br>
+         <br>
+         
+         I am a graduated Full Stack Developer at Le Wagon with a Bachelor’s Degree in Business Administration, a minor in Online Management, 
+         a propaedeutic degree in Digital Communication. 
+        
+        <br>
+        <br>  
+          Please feel free to have a look at my portfolio. Below you can find my experience, education and skills. 
+          Feel free to contact me, I am always open for new opportunities.
+        </p>
+        <div class="about-img">
+          <%= image_tag 'laura_profile_pic.jpg'%>
+        </div>
+      </div>
+      <div class="gold-line"></div>
+      <div class="about-div">
+        <div class="tab">
+          <button class="tablinks" onclick="openTab(event, 'Eduction')">Education</button>
+          <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
+          <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
+        </div>
+      </div>    
+      <div class="gold-line"></div>
+      <!-- Tab content -->
+          <%= render 'shared/education' %>
+          <%= render 'shared/experience' %>
+          <%= render 'shared/skills' %> 
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+
+
+

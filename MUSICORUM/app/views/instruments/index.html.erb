@@ -1,0 +1,45 @@
+
+
+ <div class="content">
+      <div class="cards">
+      <% @instruments.each do |instrument|  %>
+        <%= link_to instrument_path(instrument) do %>
+        <div class="card-trip">
+          <p>
+            <i Class="fa fa-im" aria-hidden="true"></i>
+            <% if instrument.image.attached? %>
+              <%= cl_image_tag (instrument.image.key), height: 200, width: 300, crop: :fill %>
+            <% else %>
+              <%= image_tag 'backgo_mfzx8q_2_jfia6a.jpg', height: 200, width: 300 %>
+            <% end %>
+          </p>
+          <div class="card-trip-infos">
+            <div>
+              <h2>
+                <%= instrument.instrument_name %>
+              </h2>
+              <p>
+                <%= instrument.location %>
+              </p>
+            </div>
+            <h2 class="card-trip-pricing">€ <%= instrument.price %> p/d</h2>
+            <% if current_user.profile_image.attached? %>
+            <%= cl_image_tag current_user.profile_image.key, class: 'card-trip-user avatar-bordered' %>
+            <% else %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "card-trip-user avatar-bordered" %>
+            <% end %>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+
+
+    <div id="map"
+    style="width: 100%; height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+
+
