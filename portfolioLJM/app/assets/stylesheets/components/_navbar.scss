@@ -1,7 +1,6 @@
 #navbar {
   justify-content: space-between;
   display: flex;
-  // background: #eae8dc;
   align-items: center;
   min-height: 68px;
   background-color: linear-gradient(to bottom, rgba(153, 185, 170, 1), rgba(221, 231, 226, 1));
@@ -27,6 +26,6 @@ padding-left: 20px;
   width: 100%;
 }
 
-.sticky + .content {
-  padding-top: 60px;
-}
+// .sticky + .content {
+//   padding-top: 60px;
+// }
